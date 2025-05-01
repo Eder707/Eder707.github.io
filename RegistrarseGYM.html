@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="estilosRegistro.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>PaginaGYM</title>
+</head>
+
+<body>
+    <div id="contenedor">
+        <nav class="navbar navbar-expand-lg body1" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand " href="index.html">
+                    <img src="img/logodeGYM.jpg" width="150px" class="headerLogo rounded">
+                </a>
+                <b class="texto">GYM LAID <br>
+                </b>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0 nav pt-2">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html"><b>INICIO</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="IMC.html"><b>PRUEBA DE IMC</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="Rutina.html"> <b>RUTINA DE EJERCICIOS</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="Alimentacion.html"><b>RECOMENDACION PARA ALIMENTACIÓN</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active rounded" href="RegistrarseGYM.html"><b>REGISTRARSE PARA GYM</b></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="contenedor">
+        <div class="login-container">
+            <h2 class="text-center text-light">Iniciar sesión</h2>
+            <form id="loginForm" class="login-form" method="post">
+                <div class="mb-3">
+                    <label for="username" class="form-label text-light">Correo</label>
+                    <input type="email" id="username" class="form-control" placeholder="Ingrese su correo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label text-light">Contraseña</label>
+                    <input type="password" id="password" class="form-control" placeholder="Ingrese su contraseña"
+                        required>
+                </div>
+                <button type="submit" class="btn btn-warning w-100">Iniciar sesión</button>
+                <p class="text-center text-light mt-3">¿No tienes cuenta? <a href="RegistrarseGYM.html"
+                        class="text-warning">Regístrate aquí</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            // Evitar que el formulario se envíe si no es válido
+            if (!this.checkValidity()) {
+                event.preventDefault(); // Detener el envío
+                // El navegador mostrará los mensajes de advertencia de los campos requeridos automáticamente
+            } else {
+                alert("Formulario enviado correctamente");
+            }
+        });
+    </script>
+
+
+    <style>
+        /* Fondo del body */
+
+        /* Contenedor del formulario */
+        #contenedor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        .navbar-nav .nav-link {
+            text-decoration: none;
+        }
+
+        /* Estilo adicional para cuando el enlace está activo o seleccionado */
+        .navbar-nav .nav-link.active {
+            text-decoration: none;
+            /* Asegura que no haya subrayado en el enlace activo */
+        }
+
+        /* Opcional: cambio de color al pasar el ratón sobre el enlace */
+        .navbar-nav .nav-link:hover {
+            text-decoration: none;
+            /* Elimina el subrayado cuando se pasa el ratón */
+        }
+
+        .navbar {
+            width: 100%;
+            position: fixed;
+            /* Esto hará que el navbar se quede fijo al desplazar la página */
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            /* Asegura que el navbar se mantenga por encima de otros elementos */
+        }
+
+        .login-container {
+            background-color: #333;
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Títulos y textos */
+        h2 {
+            color: #ffc107;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos de los campos del formulario */
+        .form-control {
+            background-color: #444;
+            color: #fff;
+            border: 1px solid #555;
+            border-radius: 5px;
+        }
+
+        .form-control:focus {
+            background-color: #555;
+            border-color: #ffc107;
+        }
+
+        /* Estilo del botón */
+        .btn-warning {
+            background-color: #ffc107;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+        }
+
+        /* Estilo del enlace de registro */
+        a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+
+    <body>
+
+
+        <script src="script3.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
