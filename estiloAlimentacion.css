@@ -1,10 +1,5 @@
 
 /* Fondo de la página de alimentación */
-body {
-    background: linear-gradient(to right, #1c1c1c, #2f2f2f);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #f0f0f0;
-}
 
 /* Estilo de la sección de introducción */
 #introduccion {

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Calcula tu Índice de Masa Corporal (IMC) gratis en GYM LAID. Descubre tu peso ideal y evalúa tu estado físico actual en segundos.">
     <link rel="stylesheet" href="style3.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -15,7 +17,7 @@
         <nav class="navbar navbar-expand-lg body1" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand " href="index.html">
-                    <img src="img/logodeGYM.jpg" width="150px" class="headerLogo rounded">
+                    <img src="img/logodeGYM.jpg" alt="Logo GYM" width="150px" class="headerLogo rounded">
                 </a>
                 <b class="texto">GYM LAID <br>
                 </b>
@@ -27,10 +29,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0 nav pt-2">
                         <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="index.html"><b>INICIO</b></a>
+                            <a class="nav-link" href="index.html"><b>INICIO</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active rounded" href="IMC.html"><b>PRUEBA DE IMC</b></a>
+                            <a class="nav-link active rounded" aria-current="page" href="IMC.html"><b>PRUEBA DE
+                                    IMC</b></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="Rutina.html"> <b>RUTINA DE EJERCICIOS</b></a>
@@ -46,15 +49,17 @@
             </div>
         </nav>
     </div>
-
+    <main>
         <div class="container my-5">
             <div class="row align-items-center">
                 <!-- Columna izquierda: descripción + imagen -->
                 <div class="col-lg-6 mb-4">
                     <h2 class="display-4 mb-5 text-start" style="color: #e6e6e6;">¿Qué es el IMC?</h2>
                     <p class="lead text-start" style="color: #ccc;">
-                        El Índice de Masa Corporal (IMC) es una medida que relaciona el peso y la estatura para identificar
-                        si una persona tiene un peso saludable. Aunque no toma en cuenta masa muscular ni distribución de grasa,
+                        El Índice de Masa Corporal (IMC) es una medida que relaciona el peso y la estatura para
+                        identificar
+                        si una persona tiene un peso saludable. Aunque no toma en cuenta masa muscular ni distribución
+                        de grasa,
                         es una guía útil para evaluar el estado físico general.
                     </p>
                     <img src="img/TablaDeImc.png" alt="Tabla de IMC" class="img-fluid rounded shadow mt-3"
@@ -68,15 +73,18 @@
                         <form id="imcForm">
                             <div class="mb-3">
                                 <label for="peso" class="form-label">Peso (kg)</label>
-                                <input type="number" class="form-control" id="peso" placeholder="Introduce tu peso" required>
+                                <input type="number" class="form-control" id="peso" placeholder="Introduce tu peso"
+                                    required>
                             </div>
                             <div class="mb-3">
                                 <label for="altura" class="form-label">Altura (m)</label>
-                                <input type="number" step="0.01" class="form-control" id="altura" placeholder="Introduce tu altura"
-                                    required>
+                                <input type="number" step="0.01" class="form-control" id="altura"
+                                    placeholder="Introduce tu altura" required>
                             </div>
                             <!-- Botón amarillo -->
-                            <button type="button" class="btn btn-warning w-100" onclick="calcularIMC()">Calcular IMC</button>
+                            <button 
+                            type="button" id = "btn-calcular" class="btn btn-warning w-100">Calcular IMC
+                            </button>
                         </form>
 
                         <div id="resultado" class="mt-4 text-center"></div>
@@ -85,13 +93,28 @@
                 </div>
             </div>
         </div>
+    </main>
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-2">© 2025 GYM LAID. Todos los derechos reservados.</p>
+            <p class="mb-2">Dirección: La fama smartfit, Santa Catarina, México</p>
+            <p class="mb-4">Teléfono: <strong>+52 8146598962</strong></p>
 
-    </div>
+            <div class="d-flex justify-content-center">
+                <!-- Puedes agregar iconos de redes sociales aquí -->
+                <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script src="script3.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

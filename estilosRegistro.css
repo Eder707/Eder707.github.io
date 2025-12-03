@@ -1,11 +1,12 @@
         /* Fondo del body */
 
         /* Contenedor del formulario */
-        #contenedor {
+        #contenedor-registro {
             display: flex;
             justify-content: center;
             align-items: center;
             padding-top: 100px;
+            margin-bottom: 100px;
         }
 
         .navbar-nav .nav-link {
